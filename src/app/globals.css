@@ -148,6 +148,9 @@
   --font-serif: var(--font-serif);
   --font-iransans: var(--font-iransans);
 
+  --color-content-gray: #666666;
+  --color-base: #1a1a1a;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
