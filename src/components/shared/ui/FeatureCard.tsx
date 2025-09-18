@@ -1,9 +1,14 @@
+import LinkButton from "@/components/shared/ui/LinkButton";
+import { Button } from "@/components/ui/button";
 import { FeatureCardProps } from "@/types/components";
-import { Stars } from "lucide-react"; // make sure you have this import
+import { ArrowLeft, ArrowRight, Stars } from "lucide-react"; // make sure you have this import
+import Link from "next/link";
 
 const FeatureCard = ({
   title,
   description,
+  linkText = "مشاهده بیشتر",
+  linkIcon = <ArrowLeft />,
   iconSize = 36,
 }: FeatureCardProps) => {
   return (
@@ -16,6 +21,12 @@ const FeatureCard = ({
       </div>
       <p className="text-lg font-semibold">{title}</p>
       <p className="text-content-gray">{description}</p>
+      <LinkButton
+        href="/about"
+        linkText={linkText}
+        linkIcon={linkIcon}
+        className="my-4"
+      />
     </div>
   );
 };
