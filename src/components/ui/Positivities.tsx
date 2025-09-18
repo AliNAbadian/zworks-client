@@ -4,7 +4,7 @@ import React from "react";
 
 const Positivities = () => {
   return (
-    <section className="h-screen w-full font-iransans my-8">
+    <section className="min-h-screen w-full font-iransans my-8">
       <PositiveHeader />
       <FeaturesGrid />
       <div className="border container mx-auto"></div>
