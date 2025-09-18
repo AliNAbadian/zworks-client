@@ -12,3 +12,19 @@ export interface LinkButtonProps {
   linkIcon: ReactNode;
   className?: string;
 }
+
+export interface GradientCircleIconProps {
+  icon: ReactNode;
+  className?: string;
+  outerSize?: string;
+  middleSize?: string;
+  innerSize?: string;
+}
+
+export interface ServicesCardProps {
+  titleIcon: ReactNode;
+  titleText: string;
+  backgroundImage?: string;
+  className?: string;
+  children?: ReactNode;
+}
