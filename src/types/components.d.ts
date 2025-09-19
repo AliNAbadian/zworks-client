@@ -28,3 +28,10 @@ export interface ServicesCardProps {
   className?: string;
   children?: ReactNode;
 }
+
+export interface IRadialEffectProps {
+  size?: string;
+  className?: string;
+  color?: string;
+  transparency?: number;
+}
