@@ -35,3 +35,18 @@ export interface IRadialEffectProps {
   color?: string;
   transparency?: number;
 }
+
+export interface IProjectsCardProps {
+  title: string;
+  description: string;
+  category: string;
+  date: string;
+  href?: string;
+  ctaLabel?: string;
+  coverImage?: string;
+  coverAlt?: string;
+  className?: string;
+  categoryLabel?: string;
+  dateLabel?: string;
+  onCtaClick?: () => void;
+}
