@@ -6,7 +6,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section className="min-h-screen w-full font-iransans my-10 container mx-auto">
+    <section className="min-h-screen w-full font-iransans my-10 container mx-auto ">
       <ServicesHeader />
       <div className="grid grid-cols-2 gap-10 my-4 max-h-[70vh] h-[70vh]">
         <ServicesCard titleIcon={<Smartphone />} titleText="طراحی">

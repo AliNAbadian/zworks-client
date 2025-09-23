@@ -101,7 +101,7 @@ const ProjectsCard: FC<IProjectsCardProps> = ({
               </button>
             )}
 
-            <div className="text-left sm:text-right">
+            <div className="text-start sm:text-end">
               <span className="block text-xs uppercase tracking-[0.2em] text-white/40">
                 {dateLabel}
               </span>

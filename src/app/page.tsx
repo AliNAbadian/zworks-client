@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import FAQ from "@/components/ui/FAQ";
 import HeroSection from "@/components/ui/HeroSection";
 import OurProjects from "@/components/ui/OurProjects";
 import Positivities from "@/components/ui/Positivities";
@@ -11,6 +12,7 @@ const page = () => {
       <Positivities />
       <Services />
       <OurProjects />
+      <FAQ />
     </div>
   );
 };

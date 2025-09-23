@@ -40,18 +40,18 @@ const OurProjects = () => {
   ];
 
   return (
-    <section className="relative my-10 min-h-screen">
+    <section className="relative my-10 min-h-screen font-iransans">
       <div className="container mx-auto">
         <ProjectsHeader />
       </div>
       <Radial
-        className="absolute left-[20%] top-[5%] -z-10"
+        className="absolute start-[20%] top-[5%] -z-10"
         size="70rem"
         color="rgba(0, 178, 98, 0.35)"
         transparency={60}
       />
       <Radial
-        className="absolute left-[75%] top-[45%] -z-10"
+        className="absolute start-[75%] top-[45%] -z-10"
         size="48rem"
         color="rgba(15, 110, 167, 0.25)"
         transparency={80}

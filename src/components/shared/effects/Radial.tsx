@@ -23,7 +23,7 @@ const Radial = ({
     <span
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 block blur-3xl opacity-80",
+        "pointer-events-none absolute start-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 block blur-3xl opacity-80",
         className,
       )}
       style={style}
