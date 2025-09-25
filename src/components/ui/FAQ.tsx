@@ -4,21 +4,30 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import AccordionFaq from "@/components/ui/FAQ/AccordionFaq";
 import FaqHeader from "@/components/ui/FAQ/FaqHeader";
 import React from "react";
 
 const FAQ = () => {
   return (
-    <section className="relative my-10 min-h-screen font-iransans container mx-auto">
+    <section className="relative my-10 max-h-screen font-iransans container mx-auto">
       <FaqHeader />
-      <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+      <div className="grid grid-cols-2 my-10 gap-8">
+        <div className="col-span-1">
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+        </div>
+        <div className="col-span-1">
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+          <AccordionFaq content="لورم ایپسوم" title="لورم ایپسوم" />
+        </div>
+      </div>
     </section>
   );
 };
