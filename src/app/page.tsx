@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import CallToAction from "@/components/ui/CallToAction";
 import FAQ from "@/components/ui/FAQ";
 import HeroSection from "@/components/ui/HeroSection";
 import OurProjects from "@/components/ui/OurProjects";
@@ -13,6 +14,7 @@ const page = () => {
       <Services />
       <OurProjects />
       <FAQ />
+      <CallToAction />
     </div>
   );
 };
