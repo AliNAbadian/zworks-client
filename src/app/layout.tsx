@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import localFont from "next/font/local";
+import Footer from "@/components/shared/ui/Footer";
 
 export const iranSans = localFont({
   src: [
@@ -98,6 +99,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
