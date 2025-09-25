@@ -7,7 +7,7 @@ import React from "react";
 const Cta = () => {
   return (
     <div className="relative h-[60vh] border rounded-3xl overflow-hidden font-iransans p-10">
-      <div className="flex flex-col items-center justify-ev h-full">
+      <div className="flex flex-col items-center justify-evenly h-full">
         <CtaHeader />
         <CtaButtons />
 
@@ -20,6 +20,7 @@ const Cta = () => {
           />
         </div>
       </div>
+
       <CtaBackground />
     </div>
   );

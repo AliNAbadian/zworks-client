@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Twitter, TwitterIcon } from "lucide-react";
 import React from "react";
 
 const socialLinks = [
-  { icon: Twitter, label: "Twitter", href: "#" },
+  { icon: TwitterIcon, label: "Twitter", href: "#" },
   { icon: Instagram, label: "Instagram", href: "#" },
   { icon: Linkedin, label: "LinkedIn", href: "#" },
 ];
@@ -59,10 +59,10 @@ const Footer = () => {
   return (
     <div
       dir="rtl"
-      className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b0b0d] px-8 py-12 text-white shadow-[0_0_120px_rgba(15,15,15,0.8)]"
+      className="relative container mx-auto overflow-hidden  bg-transparent px-8 py-12 text-white shadow-[0_0_120px_rgba(15,15,15,0.8)]"
     >
       <div className="flex flex-col gap-12 font-iransans">
-        <div className="flex flex-col gap-8 xl:flex-row xl:items-start xl:justify-between">
+        <div className="flex flex-col gap-8 xl:flex-row-reverse xl:items-start xl:justify-between">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               {socialLinks.map((item) => {
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid gap-10 text-sm sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4 place-content-around justify-center">
           {footerColumns.map((column) => (
             <div key={column.title} className="space-y-3">
               <h3 className="text-base font-semibold text-white">

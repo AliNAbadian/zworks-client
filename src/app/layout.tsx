@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import localFont from "next/font/local";
 import Footer from "@/components/shared/ui/Footer";
+import Navbar from "@/components/shared/ui/Navbar";
 
 export const iranSans = localFont({
   src: [
@@ -98,6 +99,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
           <Footer />
         </ThemeProvider>
