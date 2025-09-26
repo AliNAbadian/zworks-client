@@ -91,7 +91,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${iranSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${iranSans.variable} antialiased relative`}
       >
         <ThemeProvider
           attribute={"class"}
@@ -99,8 +99,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
           {children}
+          <Navbar />
           <Footer />
         </ThemeProvider>
       </body>
