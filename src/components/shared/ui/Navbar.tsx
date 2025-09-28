@@ -5,9 +5,10 @@ import { ActionButtons } from "./ActionButtons";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
-  const [isShowDropMenu, setIsShowDropMenu] = useState<boolean>(true);
+  const [isShowDropMenu, setIsShowDropMenu] = useState<boolean>(false);
   const closeTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="fixed max-h-[9vh] font-iransans container inset-0 mx-auto  border-y top-5 border-primary bg-white/1 backdrop-blur-md rounded-xs flex flex-row items-center justify-between px-4"
+      className="fixed max-h-[9vh] font-iransans container inset-0 mx-auto border-y top-5 border-primary bg-white/1 backdrop-blur-md rounded-xs flex flex-row items-center justify-between px-4"
       style={{ zIndex: 9999 }}
     >
       {/* Logo */}
@@ -41,9 +42,9 @@ const Navbar = () => {
       <div className="flex flex-row items-center justify-around w-1/4 ">
         {/* خدمات ما */}
         <div
-          className=""
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          className="relative"
         >
           <Button
             variant={"link"}
@@ -52,49 +53,53 @@ const Navbar = () => {
             خدمات ما
           </Button>
 
-          {isShowDropMenu && (
-            <div
-              className="
-      fixed top-[110%] right-0 left-0 w-[82vw] mx-auto z-[10000]
-      rounded-2xl bg-white/30 backdrop-blur-2xl shadow-xl p-6
-      animate-fade-slide
-    "
-            >
-              <div className="grid grid-cols-2 gap-6">
-                {/* First column */}
-                <ul className="flex flex-col text-gray-900">
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/web-development">توسعه وب</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/mobile-apps">اپلیکیشن موبایل</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/ui-ux">طراحی UI/UX</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/seo">سئو و بازاریابی</Link>
-                  </li>
-                </ul>
+          <AnimatePresence>
+            {isShowDropMenu && (
+              <motion.div
+                key="dropdown"
+                initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="fixed top-[110%] right-0 left-0 w-[82vw] mx-auto z-[10000]
+                  rounded-2xl bg-white/30 backdrop-blur-2xl shadow-xl p-6"
+              >
+                <div className="grid grid-cols-2 gap-6">
+                  {/* First column */}
+                  <ul className="flex flex-col text-gray-900">
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/web-development">توسعه وب</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/mobile-apps">اپلیکیشن موبایل</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/ui-ux">طراحی UI/UX</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/seo">سئو و بازاریابی</Link>
+                    </li>
+                  </ul>
 
-                {/* Second column */}
-                <ul className="flex flex-col text-gray-900">
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/branding">برندسازی</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/marketing">دیجیتال مارکتینگ</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/support">پشتیبانی</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
-                    <Link href="/services/cloud">زیرساخت ابری</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
+                  {/* Second column */}
+                  <ul className="flex flex-col text-gray-900">
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/branding">برندسازی</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/marketing">دیجیتال مارکتینگ</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/support">پشتیبانی</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                      <Link href="/services/cloud">زیرساخت ابری</Link>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Other menu items */}
