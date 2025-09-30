@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import "lenis/dist/lenis.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import localFont from "next/font/local";
 import Footer from "@/components/shared/ui/Footer";
 import Navbar from "@/components/shared/ui/Navbar";
+import SmoothScrolling from "@/components/shared/SmoothScroll";
 
 export const iranSans = localFont({
   src: [
@@ -99,9 +101,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <Navbar />
-          <Footer />
+          <SmoothScrolling>
+            {children}
+            <Navbar />
+            <Footer />
+          </SmoothScrolling>
         </ThemeProvider>
       </body>
     </html>
