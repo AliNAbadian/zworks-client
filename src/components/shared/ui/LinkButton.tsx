@@ -14,7 +14,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       href={href}
       className={`group transition-all duration-200 ${className}`}
     >
-      <div className="transition-all w-full  duration-200 inline-flex justify-between items-center bg-gradient-to-b from-base to-primary/10 text-white border p-4 space-x-2 rounded-full cursor-pointer group-hover:bg-white/5">
+      <div className="transition-all w-full   duration-200 inline-flex justify-between items-center bg-gradient-to-b from-base to-primary/10 text-white border p-4 space-x-2 rounded-full cursor-pointer group-hover:bg-white/5">
         <span className="me-4">{linkText}</span>
         <Button
           variant="link"
