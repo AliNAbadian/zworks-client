@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+  images: {
+    remotePatterns: [new URL("https://i.pravatar.cc/**")],
+  },
 };
 
 export default nextConfig;

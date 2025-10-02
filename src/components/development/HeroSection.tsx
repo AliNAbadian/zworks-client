@@ -4,7 +4,7 @@ import SideStripes from "../ui/development/SideStripes";
 import HeroContent from "../ui/development/HeroContent";
 import RadialBackgrounds from "../ui/development/RadialBackgrounds";
 
-const HeroSection = () => {
+const HeroSection = ({ children }: { children: React.ReactNode }) => {
   return (
     <section className="relative w-full mx-auto min-h-screen overflow-hidden">
       <div className="grid grid-cols-12 min-h-screen ">
@@ -14,7 +14,7 @@ const HeroSection = () => {
         </div>
 
         {/* Hero content */}
-        <HeroContent />
+        {children}
 
         {/* Right stripes */}
         <div className="col-span-3">
