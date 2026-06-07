@@ -113,7 +113,7 @@ const Navbar = () => {
           variant={"link"}
           className="text-white underline-offset-8 cursor-pointer"
         >
-          <Link href={"#"}>تیم تخصصی</Link>
+          <Link href={"/team"}>تیم تخصصی</Link>
         </Button>
         <Button
           variant={"link"}
@@ -124,7 +124,9 @@ const Navbar = () => {
       </div>
 
       {/* Contact button */}
-      <ActionButtons icon={<Phone />} title="ارتباط با ما" />
+      <Link href="/contact">
+        <ActionButtons icon={<Phone />} title="ارتباط با ما" />
+      </Link>
     </div>
   );
 };

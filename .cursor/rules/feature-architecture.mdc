@@ -1,0 +1,46 @@
+---
+description: Feature folders, colocation, and UI vs hooks vs lib separation
+alwaysApply: true
+---
+
+# Feature-based architecture (cp_front)
+
+## Layout
+
+- **`app/`** — Next.js routes, layouts, thin page files. Compose feature entry components here; avoid piling business logic in `page.tsx`.
+- **`features/<feature>/`** — One vertical slice per domain (`auth`, `orders`, `finance/cheques`, `dashboard`, `layout`, `profile`, `reports`, `theme`, etc.).
+- **`features/shared/`** — Cross-cutting UI (providers, bridges), formatters, query client, notifications — only when **two or more** features need it.
+- **`lib/`** (repo root) — App-wide infrastructure: `api/` (axios, routes, OpenAPI types), `app-env.ts`, env-driven config. **Not** feature-specific domain rules.
+
+## Inside a feature — keep layers independent
+
+| Location | Responsibility |
+|----------|----------------|
+| **`components/`** | UI only: props in, events/markup out. Prefer composing smaller presentational pieces. No API calls, no large state machines inline. |
+| **`hooks/`** | Behavior: `useState` / `useEffect` / router / TanStack Query (`useMutation`, `useQuery`), composition of other hooks. **No JSX** (return data + callbacks, not `<div>`). |
+| **`lib/`** | Pure helpers (normalize, parse, constants) — no React, no store reads unless unavoidable. |
+| **`*-model.ts`**, **`*-mock.ts`**, **`store.ts`** | Domain types, fixtures, zustand (or similar) **scoped to that feature**. |
+
+## Rules of thumb
+
+- **New screen or flow** → add or extend under the right `features/<name>/`; resist dumping helpers into root `lib/` unless truly global.
+- **Component getting long** → extract a **hook** (`use-*.ts`) for orchestration and/or **subcomponents** under the same feature’s `components/`.
+- **API access** → call through `lib/api/` (or feature-local wrappers); use **TanStack Query in hooks**, not inside leaf UI components.
+- **Imports** → prefer `@/features/...` and `@/lib/...`; avoid deep cross-feature imports unless going through `shared/` or a minimal shared type.
+
+## Anti-patterns
+
+```tsx
+// BAD — page card with fetch + 80 lines of state inside the same file
+export function InvoiceCard() { const [data, setData] = useState(); useEffect(() => { fetch... }, []); return <Card>...</Card>; }
+
+// GOOD — hook owns data/orchestration; component stays visual
+// hooks/use-invoice-card.ts + components/invoice-card.tsx
+```
+
+```ts
+// BAD — hook returns JSX
+export function useThing() { return <span />; }
+
+// GOOD — hook returns { value, onClick, isPending }
+```
