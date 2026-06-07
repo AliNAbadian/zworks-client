@@ -7,8 +7,8 @@ const Positivities = () => {
     <section className="min-h-screen w-full font-iransans my-8">
       <PositiveHeader />
       <FeaturesGrid />
-      <div className="border container mx-auto"></div>
-      <FeaturesGrid />
+      {/* <div className="border container mx-auto"></div>
+      <FeaturesGrid /> */}
     </section>
   );
 };

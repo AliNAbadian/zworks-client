@@ -1,3 +1,5 @@
+import { Sprout, TabletSmartphone, Wallpaper } from "lucide-react";
+
 export const HOME_POSITIVITIES_INTRO =
   "زی‌ورکس شریک دیجیتال شماست؛ از طراحی UI/UX و توسعه وب با React و Next.js تا اپلیکیشن موبایل، سئو، برندسازی، دیجیتال مارکتینگ، پشتیبانی و زیرساخت ابری — همه‌چیز برای رشد محصول و کسب‌وکار شما." as const;
 
@@ -7,18 +9,21 @@ export const homeFeatures = [
     description:
       "تحقیق کاربر، وایرفریم، پروتوتایپ و سیستم طراحی برای ساخت رابط‌هایی که کاربران دوست دارند از آن استفاده کنند.",
     imageUrl: "/images/abstractpattern.svg",
+    Icon: Wallpaper,
   },
   {
     title: "توسعه وب و موبایل",
     description:
       "ساخت وب‌سایت شرکتی، پلتفرم‌های اختصاصی با React و Next.js و اپلیکیشن‌های Android و iOS با کیفیت production-ready.",
     imageUrl: "/images/abstractpattern.svg",
+    Icon: TabletSmartphone,
   },
   {
     title: "رشد، سئو و نگهداری",
     description:
       "سئو فنی و محتوایی، دیجیتال مارکتینگ داده‌محور، پشتیبانی ۲۴ ساعته و زیرساخت ابری مقیاس‌پذیر برای رشد پایدار.",
     imageUrl: "/images/abstractpattern.svg",
+    Icon: Sprout,
   },
 ] as const;
 

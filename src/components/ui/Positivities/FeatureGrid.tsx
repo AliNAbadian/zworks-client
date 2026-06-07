@@ -9,6 +9,8 @@ const FeaturesGrid = () => {
           <FeatureCard {...feature} />
         </div>
       ))}
+
+
     </div>
   );
 };
