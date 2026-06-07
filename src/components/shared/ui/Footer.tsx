@@ -1,59 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Linkedin, Twitter, TwitterIcon } from "lucide-react";
+import { Instagram, Linkedin, TwitterIcon } from "lucide-react";
 import React from "react";
+import {
+  FOOTER_COPYRIGHT,
+  FOOTER_LOGO_ALT,
+  FOOTER_TAGLINE,
+  footerColumns,
+  footerLegalLinks,
+  footerSocialLinks,
+} from "@/features/layout/footer-data";
 
-const socialLinks = [
-  { icon: TwitterIcon, label: "Twitter", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-];
-
-const footerColumns = [
-  {
-    title: "????",
-    links: [{ label: "???? ????", href: "#" }],
-  },
-  {
-    title: "????? ?????",
-    links: [
-      { label: "???? ?????? ?? ???", href: "#" },
-      { label: "???? ?????? ?? ???", href: "#" },
-      { label: "???? ?????? ?? ???", href: "#" },
-      { label: "???? ?????? ?? ???", href: "#" },
-    ],
-  },
-  {
-    title: "????? ?????",
-    links: [
-      { label: "???? ?????? ?? ???", href: "#" },
-      { label: "???? ?????? ?? ???", href: "#" },
-      { label: "???? ?????? ?? ???", href: "#" },
-      { label: "???? ?????? ?? ???", href: "#" },
-    ],
-  },
-  {
-    title: "?????? ??",
-    links: [
-      { label: "?????? ??", href: "#" },
-      { label: "?????? ?? ??", href: "#" },
-    ],
-  },
-  {
-    title: "????? ??",
-    links: [
-      { label: "????? ?", href: "#" },
-      { label: "????? ?", href: "#" },
-      { label: "????? ?", href: "#" },
-    ],
-  },
-];
-
-const legalLinks = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
-  { label: "Cookie Policy", href: "#" },
-];
+const socialIcons = [TwitterIcon, Instagram, Linkedin] as const;
 
 const Footer = () => {
   return (
@@ -65,8 +23,8 @@ const Footer = () => {
         <div className="flex flex-col gap-8 xl:flex-row-reverse xl:items-start xl:justify-between">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              {socialLinks.map((item) => {
-                const Icon = item.icon;
+              {footerSocialLinks.map((item, index) => {
+                const Icon = socialIcons[index];
 
                 return (
                   <Link
@@ -80,8 +38,8 @@ const Footer = () => {
                 );
               })}
             </div>
-            <p className="text-sm text-white/70">
-              ?? ?? ?? ???? ????? ????? ????.
+            <p className="max-w-sm text-sm leading-relaxed text-white/70">
+              {FOOTER_TAGLINE}
             </p>
           </div>
 
@@ -90,13 +48,13 @@ const Footer = () => {
               src="/images/logo.png"
               width={160}
               height={56}
-              alt="????? ZWORKS"
+              alt={FOOTER_LOGO_ALT}
               className="object-contain"
             />
           </div>
         </div>
 
-        <div className="grid gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4 place-content-around justify-center">
+        <div className="grid place-content-around justify-center gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
           {footerColumns.map((column) => (
             <div key={column.title} className="space-y-3">
               <h3 className="text-base font-semibold text-white">
@@ -119,10 +77,10 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
-          <p>????? ???? ??? ??????? ????? ?? ZWORKS ??????? ????.</p>
+          <p>{FOOTER_COPYRIGHT}</p>
 
           <div className="flex flex-wrap items-center gap-4">
-            {legalLinks.map((link) => (
+            {footerLegalLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
