@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: zworks-client
+    restart: unless-stopped
+    ports:
+      - "23654:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      PORT: 23654
+      HOSTNAME: 0.0.0.0
