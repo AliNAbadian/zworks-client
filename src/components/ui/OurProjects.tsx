@@ -1,44 +1,9 @@
 import Radial from "../shared/effects/Radial";
 import ProjectsCard from "./OurProjects/ProjectsCard";
 import ProjectsHeader from "./OurProjects/ProjectsHeader";
+import { homeProjects } from "@/features/home/home-data";
 
 const OurProjects = () => {
-  const projects = [
-    {
-      title: "پلتفرم نوآورانه تجارت الکترونیک",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-      category: "توسعه وب",
-      date: "خرداد ۱۴۰۴",
-      href: "#",
-      ctaLabel: "مشاهده جزئیات پروژه",
-      categoryLabel: "دسته بندی:",
-      dateLabel: "زمان اجرا",
-    },
-    {
-      title: "پلتفرم نوآورانه تجارت الکترونیک",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-      category: "توسعه وب",
-      date: "خرداد ۱۴۰۴",
-      href: "#",
-      ctaLabel: "مشاهده جزئیات پروژه",
-      categoryLabel: "دسته بندی:",
-      dateLabel: "زمان اجرا",
-    },
-    {
-      title: "پلتفرم نوآورانه تجارت الکترونیک",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-      category: "توسعه وب",
-      date: "خرداد ۱۴۰۴",
-      href: "#",
-      ctaLabel: "مشاهده جزئیات پروژه",
-      categoryLabel: "دسته بندی:",
-      dateLabel: "زمان اجرا",
-    },
-  ];
-
   return (
     <section className="relative my-10 min-h-screen font-iransans">
       <div className="container mx-auto">
@@ -57,7 +22,7 @@ const OurProjects = () => {
         transparency={80}
       />
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
-        {projects.map((project) => (
+        {homeProjects.map((project) => (
           <ProjectsCard key={project.title} {...project} />
         ))}
       </div>

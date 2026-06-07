@@ -11,7 +11,7 @@ const TeamMemberCard = ({ member, className }: TeamMemberCardProps) => {
   return (
     <article
       className={cn(
-        "group relative flex min-h-[480px] flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#1a1a1a]",
+        "group relative flex min-h-[420px] flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#1a1a1a] sm:min-h-[480px]",
         "shadow-[0_30px_80px_-50px_rgba(0,0,0,0.9)] transition-shadow duration-500",
         "hover:shadow-[0_40px_100px_-50px_rgba(0,178,98,0.35)]",
         className,

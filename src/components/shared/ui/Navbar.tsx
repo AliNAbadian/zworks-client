@@ -27,19 +27,19 @@ const Navbar = () => {
 
   return (
     <div
-      className="fixed max-h-[9vh] font-iransans container inset-0 mx-auto border-y top-5 border-primary bg-white/1 backdrop-blur-md rounded-xs flex flex-row items-center justify-between px-4"
-      style={{ zIndex: 9999 }}
+      className="fixed start-0 end-0 top-5 z-[9999] mx-auto hidden h-16 max-w-[calc(100%-2rem)] font-iransans container items-center justify-between rounded-xs border-y border-primary bg-white/1 px-4 backdrop-blur-md lg:flex"
     >
       {/* Logo */}
       <Image
-        alt="zworks"
+        alt="لوگوی زی‌ورکس — شرکت طراحی و توسعه وب"
+        className="h-10 w-auto object-contain"
+        height={40}
         src={"/images/logoName.png"}
-        width={280}
-        height={96}
+        width={180}
       />
 
       {/* Menu */}
-      <div className="flex flex-row items-center justify-around w-1/4 ">
+      <div className="flex w-1/2 flex-row items-center justify-around">
         {/* خدمات ما */}
         <div
           onMouseEnter={handleMouseEnter}
@@ -61,38 +61,40 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.95 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
-                className="fixed top-[110%] right-0 left-0 w-[82vw] mx-auto z-[10000]
-                  rounded-2xl bg-white/30 backdrop-blur-2xl shadow-xl p-6"
+                className="fixed start-0 end-0 top-[110%] z-[10000] mx-auto w-[82vw] overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a1a]/70 p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-2xl"
               >
-                <div className="grid grid-cols-2 gap-6">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,178,98,0.12),transparent_55%)]" aria-hidden="true" />
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(160deg,rgba(255,255,255,0.06)_0%,transparent_50%)]" aria-hidden="true" />
+
+                <div className="relative z-10 grid grid-cols-2 gap-6">
                   {/* First column */}
-                  <ul className="flex flex-col text-gray-900">
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                  <ul className="flex flex-col text-white/80">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/web-development">توسعه وب</Link>
                     </li>
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/mobile-apps">اپلیکیشن موبایل</Link>
                     </li>
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/ui-ux">طراحی UI/UX</Link>
                     </li>
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/seo">سئو و بازاریابی</Link>
                     </li>
                   </ul>
 
                   {/* Second column */}
-                  <ul className="flex flex-col text-gray-900">
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                  <ul className="flex flex-col text-white/80">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/branding">برندسازی</Link>
                     </li>
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/marketing">دیجیتال مارکتینگ</Link>
                     </li>
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/support">پشتیبانی</Link>
                     </li>
-                    <li className="px-4 py-2 hover:bg-white/40 rounded-lg cursor-pointer">
+                    <li className="cursor-pointer rounded-lg px-4 py-2 transition-colors hover:bg-white/10 hover:text-white">
                       <Link href="/services/cloud">زیرساخت ابری</Link>
                     </li>
                   </ul>
@@ -119,7 +121,7 @@ const Navbar = () => {
           variant={"link"}
           className="text-white underline-offset-8 cursor-pointer"
         >
-          <Link href={"/"}>پلن ها</Link>
+          <Link href={"/plans"}>پلن ها</Link>
         </Button>
       </div>
 

@@ -1,89 +1,39 @@
 import LinkButton from "@/components/shared/ui/LinkButton";
 import ServicesCard from "@/components/ui/Services/ServicesCard";
 import ServicesHeader from "@/components/ui/Services/ServicesHeader";
-import { ArrowLeft, Phone, Pickaxe, Smartphone } from "lucide-react";
+import {
+  homeDesignServices,
+  homeDevelopmentServices,
+} from "@/features/home/home-data";
+import { ArrowLeft, Pickaxe, Smartphone } from "lucide-react";
 import React from "react";
 
 const Services = () => {
   return (
     <section className="min-h-screen w-full font-iransans my-10 container mx-auto ">
       <ServicesHeader />
-      <div className="grid grid-cols-2 gap-10 my-4 max-h-[70vh] h-[70vh]">
+      <div className="my-4 grid h-auto grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10 lg:h-[70vh] lg:max-h-[70vh]">
         <ServicesCard titleIcon={<Smartphone />} titleText="طراحی">
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
+          {homeDesignServices.map((service) => (
+            <LinkButton
+              key={service.href}
+              className="!w-full"
+              href={service.href}
+              linkIcon={<ArrowLeft />}
+              linkText={service.label}
+            />
+          ))}
         </ServicesCard>
         <ServicesCard titleIcon={<Pickaxe />} titleText="توسعه">
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />{" "}
-          <LinkButton
-            className="!w-full"
-            href="#"
-            linkIcon={<ArrowLeft />}
-            linkText="طراحی تجربه و رابط کاربری"
-          />
+          {homeDevelopmentServices.map((service) => (
+            <LinkButton
+              key={service.href}
+              className="!w-full"
+              href={service.href}
+              linkIcon={<ArrowLeft />}
+              linkText={service.label}
+            />
+          ))}
         </ServicesCard>
       </div>
     </section>

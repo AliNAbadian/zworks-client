@@ -1,31 +1,11 @@
 import FeatureCard from "@/components/shared/ui/FeatureCard";
-
-const features = [
-  {
-    title: "لورم ایپسوم",
-    description:
-      "ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده        از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون وسطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-    imageUrl: "/images/abstractpattern.svg",
-  },
-  {
-    title: "لورم ایپسوم",
-    description:
-      "ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده        از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون وسطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-    imageUrl: "/images/abstractpattern.svg",
-  },
-  {
-    title: "لورم ایپسوم",
-    description:
-      "ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده        از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون وسطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-    imageUrl: "/images/abstractpattern.svg",
-  },
-];
+import { homeFeatures } from "@/features/home/home-data";
 
 const FeaturesGrid = () => {
   return (
-    <div className="grid grid-cols-12 w-full container divide-x-2 mx-auto my-10">
-      {features.map((feature, index) => (
-        <div key={index} className="col-span-4">
+    <div className="container mx-auto my-10 grid w-full grid-cols-1 gap-6 md:grid-cols-3 md:gap-0 md:divide-x-2">
+      {homeFeatures.map((feature, index) => (
+        <div key={index} className="md:col-span-1">
           <FeatureCard {...feature} />
         </div>
       ))}

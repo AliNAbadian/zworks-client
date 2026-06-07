@@ -59,7 +59,7 @@ const Footer = () => {
   return (
     <div
       dir="rtl"
-      className="relative container mx-auto overflow-hidden  bg-transparent px-8 py-12 text-white shadow-[0_0_120px_rgba(15,15,15,0.8)]"
+      className="relative container mx-auto overflow-hidden bg-transparent px-4 py-10 text-white shadow-[0_0_120px_rgba(15,15,15,0.8)] sm:px-8 sm:py-12"
     >
       <div className="flex flex-col gap-12 font-iransans">
         <div className="flex flex-col gap-8 xl:flex-row-reverse xl:items-start xl:justify-between">

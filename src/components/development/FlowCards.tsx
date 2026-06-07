@@ -41,7 +41,7 @@ const steps = [
 
 const FlowCards = () => {
   return (
-    <section className="container mx-auto px-6 py-24" dir="rtl">
+    <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:py-24" dir="rtl">
       <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         {steps.map((item) => (
           <FlowCard key={item.step} {...item} />

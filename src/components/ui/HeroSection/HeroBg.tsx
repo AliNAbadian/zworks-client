@@ -2,16 +2,16 @@ import Image from "next/image";
 import React from "react";
 const HeroBg = () => {
   return (
-    <div className="w-full flex flex-row overflow-hidden h-screen absolute top-0 start-0 -z-10">
+    <div className="absolute start-0 top-0 -z-10 flex h-full min-h-screen w-full flex-row overflow-hidden opacity-60 sm:opacity-100">
       <img
+        alt=""
+        className="w-1/2 scale-x-[-1] object-cover"
         src="/images/mainvec.svg"
-        alt="mainvec"
-        className="object-cover w-[50%] scale-x-[-1]"
       />
       <img
+        alt=""
+        className="me-auto w-1/2 object-cover"
         src="/images/mainvec.svg"
-        alt="mainvec"
-        className="object-cover w-[50%] me-auto"
       />
     </div>
   );

@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { HOME_CTA } from "@/features/home/home-data";
 import React from "react";
 
 const CtaButtons = () => {
   return (
     <div className="flex flex-col items-center justify-center z-10 space-y-4">
-      <p>لورنم ایپسوم</p>
+      <p>{HOME_CTA.actionHint}</p>
       <div className="flex flex-row items-center gap-x-3">
         <Button size={"lg"} className="cursor-pointer">
           شروع کن

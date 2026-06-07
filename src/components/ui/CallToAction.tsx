@@ -3,7 +3,7 @@ import React from "react";
 
 const CallToAction = () => {
   return (
-    <section className="container mx-auto my-24 max-h-screen relative">
+    <section className="relative container mx-auto my-16 px-4 lg:my-24 lg:max-h-screen">
       <Cta />
     </section>
   );

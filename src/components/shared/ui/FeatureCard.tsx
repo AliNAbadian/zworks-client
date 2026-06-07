@@ -12,9 +12,9 @@ const FeatureCard = ({
   iconSize = 36,
 }: FeatureCardProps) => {
   return (
-    <div className="flex flex-col items-center justify-between gap-y-6 w-full p-8">
+    <div className="flex w-full flex-col items-center justify-between gap-y-6 p-5 sm:p-8">
       <div
-        className="bg-base h-[10vh] w-[5vw] rounded-full border-10 border-content-gray bg-cover bg-center flex items-center justify-center"
+        className="bg-base h-[10vh] lg:w-[5vw] w-[22vw] rounded-full border-10 border-content-gray bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url('/images/abstractpattern.svg')` }}
       >
         <Stars size={iconSize} className="text-primary m-auto" />

@@ -5,9 +5,9 @@ import ContactForm from "@/features/contact/components/contact-form";
 
 const ContactHero = () => {
   return (
-    <section className="relative w-full overflow-hidden pt-32 pb-20">
+    <section className="relative w-full overflow-hidden pb-12 pt-20 sm:pb-16 sm:pt-24 lg:pb-20 lg:pt-32">
       <div className="container relative z-10 mx-auto px-4 md:px-6">
-        <div className="flex flex-col-reverse items-stretch gap-12 lg:flex-row lg:items-center lg:gap-16">
+        <div className="flex flex-col-reverse items-stretch gap-8 sm:gap-12 lg:flex-row lg:items-center lg:gap-16">
           <ContactForm />
           <ContactCtaHeading />
         </div>

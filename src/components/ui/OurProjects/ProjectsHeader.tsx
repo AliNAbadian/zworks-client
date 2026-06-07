@@ -1,16 +1,13 @@
+import { HOME_PROJECTS_INTRO } from "@/features/home/home-data";
 import React from "react";
 
 const ProjectsHeader = () => {
   return (
     <div className="container mx-auto">
-      <h4 className="font-black text-6xl text-center py-18">
+      <h4 className="py-10 text-center font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
         پروژه های <span className="text-content-gray"> ما</span>
       </h4>
-      <p className="text-center text-content-gray">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-        از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
-      </p>
+      <p className="text-center text-content-gray">{HOME_PROJECTS_INTRO}</p>
     </div>
   );
 };

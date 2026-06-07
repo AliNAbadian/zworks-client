@@ -8,7 +8,7 @@ const TeamPage = () => {
     <div className="min-h-screen overflow-x-hidden font-iransans">
       <TeamHero />
 
-      <div className="container mx-auto flex flex-col gap-32 px-4 py-24 md:px-6">
+      <div className="container mx-auto flex flex-col gap-16 px-4 py-12 sm:gap-24 sm:py-16 md:px-6 lg:gap-32 lg:py-24">
         {teamGroups.map((group) => (
           <TeamSection key={group.id} group={group} />
         ))}

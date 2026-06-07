@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 
 import ContactPage from "@/features/contact/components/contact-page";
+import { buildPageMetadata } from "@/lib/seo/site-seo";
 
-export const metadata: Metadata = {
-  title: "ارتباط با ما | ZWORKS",
-  description: "فرم تماس با تیم زی‌ورکس برای شروع پروژه شما",
-};
+export const metadata: Metadata = buildPageMetadata({
+  title: "تماس با زی‌ورکس — مشاوره طراحی وب",
+  description:
+    "برای مشاوره رایگان طراحی وب‌سایت، توسعه React/Next.js یا سئو با تیم زی‌ورکس تماس بگیرید. فرم تماس آنلاین — پاسخ سریع.",
+  path: "/contact",
+  keywords: ["مشاوره طراحی وب", "سفارش طراحی سایت"],
+});
 
 const page = () => {
   return <ContactPage />;

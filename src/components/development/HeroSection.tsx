@@ -7,17 +7,14 @@ import RadialBackgrounds from "../ui/development/RadialBackgrounds";
 const HeroSection = () => {
   return (
     <section className="relative w-full mx-auto min-h-screen overflow-hidden">
-      <div className="grid grid-cols-12 min-h-screen ">
-        {/* Left stripes */}
-        <div className="col-span-3">
+      <div className="grid min-h-screen grid-cols-12">
+        <div className="col-span-3 hidden lg:block">
           <SideStripes />
         </div>
 
-        {/* Hero content */}
         <HeroContent />
 
-        {/* Right stripes */}
-        <div className="col-span-3">
+        <div className="col-span-3 hidden lg:block">
           <SideStripes />
         </div>
       </div>

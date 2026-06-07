@@ -23,11 +23,12 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     >
       {/* Text Button */}
       <Button
+        className="cursor-pointer backdrop-blur-2xl text-xs sm:text-sm"
         size="lg"
         variant="outline"
-        className="cursor-pointer backdrop-blur-2xl"
       >
-        {title}
+        <span className="hidden sm:inline">{title}</span>
+        <span className="sm:hidden">{title.split(" ")[0]}</span>
       </Button>
 
       {/* Animated Icon Button */}
