@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { CloudLightning } from "lucide-react";
 import { ReactNode } from "react";
 
 interface ActionButtonsProps {

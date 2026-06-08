@@ -1,14 +1,14 @@
+import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import FeaturesGrid from "@/components/ui/Positivities/FeatureGrid";
 import PositiveHeader from "@/components/ui/Positivities/PositiveHeader";
-import React from "react";
 
 const Positivities = () => {
   return (
     <section className="min-h-screen w-full font-iransans my-8">
-      <PositiveHeader />
+      <ScrollReveal>
+        <PositiveHeader />
+      </ScrollReveal>
       <FeaturesGrid />
-      {/* <div className="border container mx-auto"></div>
-      <FeaturesGrid /> */}
     </section>
   );
 };

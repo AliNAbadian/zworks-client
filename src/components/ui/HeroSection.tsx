@@ -1,17 +1,7 @@
-import { ActionButtons } from "@/components/shared/ui/ActionButtons";
-import { Button } from "@/components/ui/button";
-import HeroBg from "@/components/ui/HeroSection/HeroBg";
-import HeroMeta from "@/components/ui/HeroSection/HeroMeta";
-import { CloudLightning } from "lucide-react";
-import React from "react";
+import HeroScrollSection from "@/features/home/components/hero-scroll-section";
 
 const HeroSection = () => {
-  return (
-    <section className="relative w-full">
-      <HeroMeta />
-      <HeroBg />
-    </section>
-  );
+  return <HeroScrollSection />;
 };
 
 export default HeroSection;
