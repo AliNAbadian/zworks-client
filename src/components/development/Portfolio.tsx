@@ -2,6 +2,7 @@ import React from "react";
 import LinkButton from "../shared/ui/LinkButton";
 import { ArrowBigLeftDash } from "lucide-react";
 import Image from "next/image";
+import { DEVELOPMENT_PORTFOLIO_INTRO } from "@/features/development/development-data";
 
 const Portfolio = () => {
   return (
@@ -11,7 +12,7 @@ const Portfolio = () => {
           پورتوفلیو خدمات توسعه وب
         </h1>
         <p className="text-sm text-gray-500 sm:text-base">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          {DEVELOPMENT_PORTFOLIO_INTRO}
         </p>
         <div className="grid h-[200px] grid-cols-1 gap-4 sm:h-[30vh] sm:grid-cols-2">
           <div className="border border-gray-800 rounded-4xl  relative overflow-hidden">

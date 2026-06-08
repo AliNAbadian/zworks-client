@@ -11,7 +11,7 @@ const FaqHeader = () => {
       </h2>
       <p className="text-content-gray">{HOME_FAQ_INTRO}</p>
       <div className="relative w-full max-w-sm">
-        <Input className="text-white" placeholder="جستجو" prefix="asdas" />
+        <Input className="text-white" placeholder="جستجو در سوالات" />
         <Search className="pointer-events-none absolute top-1/2 start-3 size-4 -translate-y-1/2 opacity-100 select-none" />
       </div>
     </div>

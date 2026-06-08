@@ -1,3 +1,4 @@
+import { TEAM_SECTION_COPY } from "@/features/team/lib/constants";
 import type { TeamGroup, TeamMemberSocialLink } from "@/features/team/team-model";
 
 const defaultSocialLinks: TeamMemberSocialLink[] = [
@@ -22,9 +23,8 @@ const developmentAvatars = [
 
 export const designTeamGroup: TeamGroup = {
   id: "design",
-  title: "تیم طراحی",
-  description:
-    "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+  title: TEAM_SECTION_COPY.design.title,
+  description: TEAM_SECTION_COPY.design.description,
   members: [
     {
       id: "design-1",
@@ -59,9 +59,8 @@ export const designTeamGroup: TeamGroup = {
 
 export const developmentTeamGroup: TeamGroup = {
   id: "development",
-  title: "تیم توسعه",
-  description:
-    "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+  title: TEAM_SECTION_COPY.development.title,
+  description: TEAM_SECTION_COPY.development.description,
   members: [
     {
       id: "dev-1",
