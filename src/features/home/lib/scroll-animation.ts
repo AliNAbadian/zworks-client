@@ -1,7 +1,7 @@
 import type { Transition, Variant, ViewportOptions } from "motion/react";
 
 export const scrollViewport: ViewportOptions = {
-  once: true,
+  once: false,
   margin: "-10% 0px -8% 0px",
   amount: 0.2,
 };
