@@ -1,11 +1,11 @@
 # syntax=docker/dockerfile:1
 
 FROM oven/bun:latest AS base
-FROM node:22-alpine AS base2
+
 WORKDIR /app
 
 FROM base AS deps
-
+RUN echo 'registry=https://registry.npmjs.org' > ~/.npmrc
 COPY package.json bun.lock ./
 
 RUN npm config set registry https://package-mirror.liara.ir/repository/npm/
