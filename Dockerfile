@@ -8,7 +8,7 @@ FROM base AS deps
 RUN echo 'registry=https://registry.npmjs.org' > ~/.npmrc
 COPY package.json bun.lock ./
 
-RUN npm config set registry https://package-mirror.liara.ir/repository/npm/
+# RUN npm config set registry https://package-mirror.liara.ir/repository/npm/
 RUN bun install --frozen-lockfile
 
 FROM base AS builder
