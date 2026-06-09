@@ -6,7 +6,7 @@ WORKDIR /app
 FROM base AS deps
 COPY package.json package-lock.json ./
 RUN npm config set registry https://mirror.abrha.net/repository/npm/
-RUN npm ci
+RUN npm ci --verbose
 
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
