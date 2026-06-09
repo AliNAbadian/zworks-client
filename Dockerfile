@@ -1,13 +1,14 @@
 # syntax=docker/dockerfile:1
 
 FROM oven/bun:latest AS base
+FROM node:22-alpine AS base
 WORKDIR /app
 
 FROM base AS deps
 
 COPY package.json bun.lock ./
 
-RUN bun config set registry https://package-mirror.liara.ir/repository/npm/
+RUN npm config set registry https://package-mirror.liara.ir/repository/npm/
 RUN bun install --frozen-lockfile
 
 FROM base AS builder
