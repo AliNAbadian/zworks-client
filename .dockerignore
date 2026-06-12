@@ -1,14 +1,14 @@
-Dockerfile
-.dockerignore
-node_modules
-.next
-.git
-.gitignore
-*.md
-.env*
-.vscode
-.idea
-coverage
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Dockerfile
+# .dockerignore
+# node_modules
+# .next
+# .git
+# .gitignore
+# *.md
+# .env*
+# .vscode
+# .idea
+# coverage
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
