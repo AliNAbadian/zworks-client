@@ -19,4 +19,4 @@ USER nextjs
 
 EXPOSE 3000
 
-CMD ["bun", "server.js"]
+CMD ["bun", "zworks-client/server.js"]
