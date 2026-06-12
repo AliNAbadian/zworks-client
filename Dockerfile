@@ -15,7 +15,7 @@ COPY . .
 
 # بهینه‌سازی: غیرفعال کردن تلمتری و تنظیم محدودیت حافظه برای Node.js
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_OPTIONS="--max-old-space-size=4096"
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 
 # اگر بیلد با turbopack همچنان کرش کرد، می‌توانید --turbopack را حذف کنید
 RUN bun run build
