@@ -1,4 +1,5 @@
 # syntax=docker/dockerfile:1
+FROM node:20-slim AS runner
 
 # ---- Base Stage ----
 # Use oven/bun:latest for the base image, which is efficient for Node.js projects.
