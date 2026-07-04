@@ -4,10 +4,12 @@ WORKDIR /app
 ARG NEXT_PUBLIC_SITE_URL=https://zworks.ir
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_ENV=production
+ENV NODE_OPTIONS="--max-old-space-size=3072"
 
 COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile
+# Install production deps only, then add build-time dev deps (skip @biomejs/biome — its musl binary fails in this image).
+RUN bun install --frozen-lockfile --production \
+  && bun add -d typescript @tailwindcss/postcss tailwindcss @types/node @types/react @types/react-dom tw-animate-css
 
 COPY . .
 RUN rm -rf .next
@@ -31,7 +33,7 @@ COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3000
 
-HEALTHCHECK --interval=15s --timeout=10s --start-period=60s --retries=5 \
+HEALTHCHECK --interval=15s --timeout=10s --start-period=90s --retries=5 \
   CMD curl -f http://127.0.0.1:3000/ || exit 1
 
 CMD ["bun", "server.js"]

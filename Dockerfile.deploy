@@ -1,0 +1,33 @@
+# Packages a local Next.js build — does NOT run `next build`.
+#
+# 1. On your PC:
+#      bun run build
+#      scp -r .next public Dockerfile.deploy docker-compose.yml Caddyfile .env root@YOUR_VPS:/opt/zworks-client/
+#
+# 2. On the VPS:
+#      cd /opt/zworks-client
+#      docker build -f Dockerfile.deploy -t zworks-client:latest .
+#      docker compose up -d
+
+FROM oven/bun:1
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends curl \
+  && rm -rf /var/lib/apt/lists/*
+
+COPY public ./public
+COPY .next/standalone ./
+COPY .next/static ./.next/static
+
+EXPOSE 3000
+
+HEALTHCHECK --interval=15s --timeout=10s --start-period=60s --retries=5 \
+  CMD curl -f http://127.0.0.1:3000/ || exit 1
+
+CMD ["bun", "server.js"]
