@@ -6,7 +6,7 @@ export const organizationSchema = {
   name: SITE_NAME,
   alternateName: SITE_NAME_EN,
   url: SITE_URL,
-  logo: `${SITE_URL}/images/logoName.png`,
+  logo: `${SITE_URL}/images/logo-name.svg`,
   description: DEFAULT_DESCRIPTION,
   sameAs: [] as string[],
 };

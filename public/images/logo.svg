@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Mars Agency logo">
+  <circle cx="256" cy="256" r="210" fill="#C1440E"/>
+  <circle cx="256" cy="256" r="210" fill="url(#mars-shade)" opacity="0.45"/>
+  <ellipse cx="190" cy="210" rx="52" ry="44" fill="#8B3010" opacity="0.55"/>
+  <ellipse cx="320" cy="280" rx="38" ry="32" fill="#8B3010" opacity="0.4"/>
+  <ellipse cx="240" cy="340" rx="64" ry="28" fill="#A03810" opacity="0.35"/>
+  <circle cx="300" cy="190" r="22" fill="#D25A23" opacity="0.5"/>
+  <circle cx="170" cy="290" r="16" fill="#E8734A" opacity="0.45"/>
+  <circle cx="350" cy="320" r="12" fill="#D25A23" opacity="0.4"/>
+  <defs>
+    <radialGradient id="mars-shade" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0%" stop-color="#E8734A"/>
+      <stop offset="55%" stop-color="#C1440E"/>
+      <stop offset="100%" stop-color="#6B2808"/>
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" fill="none" role="img" aria-label="Mars Agency">
+  <g transform="translate(8, 10)">
+    <circle cx="50" cy="50" r="46" fill="#C1440E"/>
+    <circle cx="50" cy="50" r="46" fill="url(#planet-glow)" opacity="0.5"/>
+    <ellipse cx="34" cy="42" rx="12" ry="10" fill="#8B3010" opacity="0.55"/>
+    <ellipse cx="62" cy="58" rx="9" ry="8" fill="#8B3010" opacity="0.4"/>
+    <circle cx="58" cy="36" r="5" fill="#E8734A" opacity="0.5"/>
+  </g>
+  <text x="118" y="58" fill="#FFFFFF" font-family="Arial Black, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="6">MARS</text>
+  <line x1="118" y1="72" x2="340" y2="72" stroke="#C1440E" stroke-width="2"/>
+  <text x="118" y="98" fill="#FFFFFF" font-family="Tahoma, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="1">E'13</text>
+  <defs>
+    <radialGradient id="planet-glow" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0%" stop-color="#E8734A"/>
+      <stop offset="55%" stop-color="#C1440E"/>
+      <stop offset="100%" stop-color="#6B2808"/>
+    </radialGradient>
+  </defs>
+</svg>

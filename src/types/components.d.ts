@@ -3,6 +3,7 @@ import type { LucideIcon } from "lucide-react";
 export interface FeatureCardProps {
   title: string;
   description: string;
+  href: string;
   iconSize?: number;
   linkText?: string;
   linkIcon?: React.ReactNode;

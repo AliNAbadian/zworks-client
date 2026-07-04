@@ -5,26 +5,27 @@ import { ArrowLeft } from "lucide-react";
 const FeatureCard = ({
   title,
   description,
+  href,
   linkText = "مشاهده بیشتر",
   linkIcon = <ArrowLeft />,
   iconSize = 36,
-  Icon
+  Icon,
 }: FeatureCardProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-between gap-y-6 p-5 sm:p-8">
       <div
-        className="bg-base h-[10vh] lg:w-[5vw] w-[22vw] rounded-full border-10 border-content-gray bg-cover bg-center flex items-center justify-center"
+        className="bg-base flex h-[10vh] w-[22vw] items-center justify-center rounded-full border-10 border-content-gray bg-cover bg-center lg:w-[5vw]"
         style={{ backgroundImage: `url('/images/abstractpattern.svg')` }}
       >
-        <Icon size={iconSize} className="text-primary m-auto" />
+        <Icon size={iconSize} className="m-auto text-primary" />
       </div>
-      <p className="text-lg font-semibold">{title}</p>
-      <p className="text-content-gray">{description}</p>
+      <h3 className="text-center text-lg font-semibold text-balance">{title}</h3>
+      <p className="text-center text-content-gray">{description}</p>
       <LinkButton
-        href="/about"
-        linkText={linkText}
-        linkIcon={linkIcon}
         className="my-4"
+        href={href}
+        linkIcon={linkIcon}
+        linkText={linkText}
       />
     </div>
   );

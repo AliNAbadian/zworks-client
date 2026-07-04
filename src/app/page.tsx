@@ -13,12 +13,12 @@ import { buildPageMetadata, SITE_NAME } from "@/lib/seo/site-seo";
 export const metadata: Metadata = buildPageMetadata({
   title: `${SITE_NAME} — طراحی وب‌سایت و توسعه React/Next.js`,
   description:
-    "مارس؛ طراحی وب سایت حرفه‌ای، توسعه وب با React و Next.js، UI/UX، سئو و برندسازی. ساخت سایت شرکتی و اپلیکیشن وب برای رشد کسب‌وکار شما.",
+    "مارس؛ طراحی وب‌سایت حرفه‌ای، توسعه وب با React و Next.js، UI/UX، سئو و برندسازی. ساخت سایت شرکتی و اپلیکیشن وب برای رشد کسب‌وکار شما.",
   path: "/",
   titleAbsolute: true,
   keywords: [
     "شرکت طراحی وب",
-    "ساخت وب سایت حرفه‌ای",
+    "ساخت وب‌سایت حرفه‌ای",
     "طراحی سایت شرکتی",
   ],
 });

@@ -16,7 +16,7 @@ const Services = () => {
       </ScrollReveal>
       <div className="my-4 grid h-auto grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10 lg:h-[70vh] lg:max-h-[70vh]">
         <ScrollReveal delay={0.1} variant="slideInEnd">
-          <ServicesCard titleIcon={<Smartphone />} titleText="طراحی">
+          <ServicesCard titleIcon={<Smartphone />} titleText="طراحی و رشد">
             {homeDesignServices.map((service) => (
               <LinkButton
                 key={service.href}

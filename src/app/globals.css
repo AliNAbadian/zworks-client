@@ -152,7 +152,7 @@
 
   --color-content-gray: #666666;
   --color-base: #1a1a1a;
-  --color-grayBg: #131917;
+  --color-grayBg: #1a1410;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

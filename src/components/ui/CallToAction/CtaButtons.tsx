@@ -1,21 +1,23 @@
+"use client";
+
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
-import { HOME_CTA } from "@/features/home/home-data";
-import React from "react";
 
 const CtaButtons = () => {
   return (
-    <div className="flex flex-col items-center justify-center z-10 space-y-4">
-      <p>{HOME_CTA.actionHint}</p>
+    <div className="z-10 flex flex-col items-center justify-center gap-4">
       <div className="flex flex-row items-center gap-x-3">
-        <Button size={"lg"} className="cursor-pointer">
-          شروع کن
+        <Button asChild className="h-12 cursor-pointer rounded-2xl px-8 font-semibold" size="lg">
+          <Link href="/contact">درخواست مشاوره رایگان</Link>
         </Button>
         <Button
-          size={"lg"}
-          className=" border cursor-pointer"
-          variant={"ghost"}
+          asChild
+          className="h-12 cursor-pointer rounded-2xl border px-8 font-semibold"
+          size="lg"
+          variant="ghost"
         >
-          مشاوره رایگان{" "}
+          <Link href="/plans">مشاهده پلن‌های قیمت</Link>
         </Button>
       </div>
     </div>

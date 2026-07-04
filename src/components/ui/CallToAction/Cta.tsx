@@ -1,7 +1,6 @@
 import CtaBackground from "@/components/ui/CallToAction/CtaBackground";
 import CtaButtons from "@/components/ui/CallToAction/CtaButtons";
 import CtaHeader from "@/components/ui/CallToAction/CtaHeader";
-import Image from "next/image";
 import React from "react";
 
 const Cta = () => {
@@ -12,12 +11,13 @@ const Cta = () => {
         <CtaButtons />
 
         <div className="relative z-10 w-full max-w-xs sm:max-w-md lg:max-w-2xl">
-          <Image
-            alt="مارس"
-            className="h-auto w-full"
-            height={960}
-            src="/images/bigLogo.png"
-            width={1080}
+          <img
+            alt="مارس آژانس"
+            className="h-auto w-full drop-shadow-[0_24px_80px_rgb(var(--primary-rgb)/0.35)]"
+            decoding="async"
+            height={680}
+            src="/images/big-logo.svg"
+            width={540}
           />
         </div>
       </div>

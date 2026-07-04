@@ -1,6 +1,6 @@
 "use client";
 
-import HeroBg from "@/components/ui/HeroSection/HeroBg";
+import LandingLightPillar from "@/features/home/components/landing-light-pillar";
 import HeroMeta from "@/components/ui/HeroSection/HeroMeta";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
@@ -24,23 +24,23 @@ const HeroScrollSection = () => {
     [0, 0.85],
     [1, reduceMotion ? 1 : 0.25],
   );
-  const backgroundY = useTransform(
+  const backgroundOpacity = useTransform(
     scrollYProgress,
-    [0, 1],
-    [0, reduceMotion ? 0 : 60],
+    [0, 0.75],
+    [1, reduceMotion ? 1 : 0],
   );
 
   return (
-    <section ref={sectionRef} className="relative w-full">
-      <motion.div style={{ y: contentY, opacity: contentOpacity }}>
-        <HeroMeta />
+    <section ref={sectionRef} className="relative w-full min-h-screen overflow-hidden">
+      <motion.div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{ opacity: backgroundOpacity }}
+      >
+        <LandingLightPillar />
       </motion.div>
 
-      <motion.div
-        className="pointer-events-none absolute inset-0"
-        style={{ y: backgroundY }}
-      >
-        <HeroBg />
+      <motion.div style={{ y: contentY, opacity: contentOpacity }}>
+        <HeroMeta />
       </motion.div>
     </section>
   );

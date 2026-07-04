@@ -22,15 +22,24 @@ const PricingCard = ({ pkg }: PricingCardProps) => {
     <article
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-[28px] border p-6 sm:p-8",
-        "bg-[linear-gradient(145deg,rgba(4,40,39,0.95)_0%,rgba(4,20,46,0.92)_55%,rgba(3,18,28,0.92)_100%)]",
-        "shadow-[0_40px_100px_-60px_rgba(0,0,0,0.85)] transition-all duration-500",
+        "bg-[#12100e] shadow-[0_32px_90px_-55px_rgba(0,0,0,0.95)]",
+        "transition-[transform,box-shadow,border-color] duration-300 ease-out",
+        "hover:-translate-y-1.5 motion-reduce:hover:translate-y-0",
         pkg.highlighted
-          ? "z-10 border-primary/50 shadow-[0_50px_120px_-50px_rgb(var(--primary-rgb)/0.45)] xl:scale-[1.03]"
-          : "border-white/10 hover:border-primary/30 hover:shadow-[0_50px_120px_-50px_rgb(var(--primary-rgb)/0.25)]",
+          ? "z-10 border-primary/45 shadow-[0_40px_100px_-40px_rgb(var(--primary-rgb)/0.5)] ring-1 ring-primary/20"
+          : "border-white/10 hover:border-primary/30 hover:shadow-[0_40px_100px_-45px_rgb(var(--primary-rgb)/0.28)]",
       )}
     >
+      {pkg.highlighted ? (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"
+        />
+      ) : null}
+
       {pkg.badge ? (
-        <span className="absolute start-6 top-6 rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
+        <span className="absolute start-6 top-6 z-10 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-[0_8px_24px_-8px_rgb(var(--primary-rgb)/0.8)]">
+          <Sparkles className="size-3.5" aria-hidden="true" />
           {pkg.badge}
         </span>
       ) : null}
@@ -41,27 +50,38 @@ const PricingCard = ({ pkg }: PricingCardProps) => {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgb(var(--primary-rgb)/0.2),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgb(var(--primary-rgb)/0.22),transparent_58%)] opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,transparent_0%,rgb(var(--primary-rgb)/0.06)_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />
 
       <div className="relative flex flex-1 flex-col gap-6">
         <div className="flex items-start justify-between gap-4 pt-8">
-          <div>
-            <h3 className="text-xl font-black text-white sm:text-2xl">
+          <div className="min-w-0">
+            <h3 className="text-xl font-black text-white transition-colors duration-300 group-hover:text-primary sm:text-2xl">
               {pkg.title}
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-content-gray">
               {pkg.audience}
             </p>
           </div>
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-            <Icon className="size-6 text-primary" />
+          <div
+            className={cn(
+              "flex size-12 shrink-0 items-center justify-center rounded-2xl border transition-colors duration-300",
+              pkg.highlighted
+                ? "border-primary/30 bg-primary/15 text-primary"
+                : "border-white/10 bg-white/5 text-primary group-hover:border-primary/25 group-hover:bg-primary/10",
+            )}
+          >
+            <Icon className="size-6" strokeWidth={1.75} />
           </div>
         </div>
 
-        <div className="border-y border-white/10 py-5">
+        <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-5 backdrop-blur-sm">
           <p className="text-sm text-content-gray">{pkg.priceLabel}</p>
-          <p className="mt-1 text-3xl font-black text-white sm:text-4xl">
+          <p className="mt-1 bg-gradient-to-l from-white to-white/80 bg-clip-text text-3xl font-black text-transparent sm:text-4xl">
             {pkg.price}
           </p>
         </div>
@@ -72,7 +92,9 @@ const PricingCard = ({ pkg }: PricingCardProps) => {
               key={feature}
               className="flex items-start gap-3 text-sm text-white/80"
             >
-              <Check className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border border-primary/25 bg-primary/10">
+                <Check className="size-3 text-primary" strokeWidth={2.5} />
+              </span>
               <span>{feature}</span>
             </li>
           ))}
@@ -81,10 +103,10 @@ const PricingCard = ({ pkg }: PricingCardProps) => {
         <Button
           asChild
           className={cn(
-            "h-12 w-full rounded-2xl font-semibold",
+            "h-12 w-full cursor-pointer rounded-2xl font-semibold transition-all duration-300",
             pkg.highlighted
-              ? "bg-primary text-primary-foreground hover:bg-primary/90"
-              : "bg-white/10 text-white hover:bg-white/15",
+              ? "bg-primary text-primary-foreground shadow-[0_12px_40px_-12px_rgb(var(--primary-rgb)/0.75)] hover:bg-primary/90"
+              : "border border-white/10 bg-white/10 text-white hover:border-primary/30 hover:bg-primary/15 hover:text-white",
           )}
           size="lg"
         >

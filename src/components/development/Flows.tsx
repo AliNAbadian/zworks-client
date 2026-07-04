@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { title: "تعریف اهداف", color: "from-emerald-500/30 to-emerald-500/5" },
+  { title: "تعریف اهداف", color: "from-primary/30 to-primary/5" },
   { title: "تحلیل و بررسی", color: "from-gray-400/40 to-transparent" },
   { title: "انتخاب فناوری‌ها", color: "from-gray-400/40 to-transparent" },
   { title: "طراحی خلاقانه", color: "from-gray-400/40 to-transparent" },
@@ -30,7 +30,7 @@ const Arrow = () => {
     <svg className="w-32 h-24 -scale-x-100" fill="none" viewBox="0 0 200 100">
       <path
         d="M0,100 C50,0 150,0 200,100"
-        stroke="#4ade80"
+        stroke="#E8734A"
         strokeWidth="2"
         strokeDasharray="4 4"
         fill="none"
@@ -45,7 +45,7 @@ const Arrow = () => {
           refY="3"
           orient="auto"
         >
-          <path d="M0,0 L0,6 L6,3 z" fill="#4ade80" />
+          <path d="M0,0 L0,6 L6,3 z" fill="#E8734A" />
         </marker>
       </defs>
     </svg>

@@ -10,7 +10,7 @@ type ContactFormFieldProps = {
 };
 
 const fieldClassName =
-  "h-14 rounded-2xl border-white/10 bg-[#131917] px-4 text-sm text-white placeholder:text-content-gray focus-visible:border-primary/50 focus-visible:ring-primary/20";
+  "h-14 rounded-2xl border-white/10 bg-grayBg px-4 text-sm text-white placeholder:text-content-gray focus-visible:border-primary/50 focus-visible:ring-primary/20";
 
 const ContactFormField = ({
   field,

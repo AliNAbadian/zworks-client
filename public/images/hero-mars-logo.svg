@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" role="img" aria-label="Mars">
+  <defs>
+    <radialGradient id="hero-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#C1440E" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C1440E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-planet" cx="0.38" cy="0.32" r="0.72">
+      <stop offset="0%" stop-color="#F0884A"/>
+      <stop offset="45%" stop-color="#D25A23"/>
+      <stop offset="100%" stop-color="#6B2808"/>
+    </radialGradient>
+    <radialGradient id="hero-shine" cx="0.3" cy="0.22" r="0.42">
+      <stop offset="0%" stop-color="#FFD0B0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFD0B0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hero-swoosh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="200" cy="200" r="160" fill="url(#hero-glow)"/>
+
+  <g transform="translate(200 200)">
+    <circle r="100" fill="url(#hero-planet)"/>
+    <circle r="100" fill="url(#hero-shine)"/>
+
+    <ellipse cx="-24" cy="-20" rx="22" ry="18" fill="#8B3010" opacity="0.45"/>
+    <ellipse cx="28" cy="14" rx="16" ry="13" fill="#8B3010" opacity="0.35"/>
+    <circle cx="36" cy="-28" r="8" fill="#D25A23" opacity="0.4"/>
+
+    <path
+      d="M-70 14 C-32 2, 12 -4, 70 6"
+      stroke="url(#hero-swoosh)"
+      stroke-linecap="round"
+      stroke-width="6"
+    />
+    <path
+      d="M-66 32 C-28 22, 16 16, 74 24"
+      stroke="url(#hero-swoosh)"
+      stroke-linecap="round"
+      stroke-width="6"
+    />
+  </g>
+</svg>

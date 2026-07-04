@@ -71,7 +71,7 @@ const ContactForm = () => {
 
           <button
             className={cn(
-              "flex h-14 w-full items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#131917] px-4 text-sm text-content-gray transition-colors hover:border-white/20 sm:max-w-[383px]",
+              "flex h-14 w-full items-center justify-center gap-3 rounded-2xl border border-white/10 bg-grayBg px-4 text-sm text-content-gray transition-colors hover:border-white/20 sm:max-w-[383px]",
             )}
             onClick={() => fileInputRef.current?.click()}
             type="button"

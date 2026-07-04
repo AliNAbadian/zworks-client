@@ -15,13 +15,13 @@ const OurProjects = () => {
       <Radial
         className="absolute start-[20%] top-[5%] -z-10"
         size="70rem"
-        color="rgba(0, 178, 98, 0.35)"
+        color="rgba(193, 68, 14, 0.35)"
         transparency={60}
       />
       <Radial
         className="absolute start-[75%] top-[45%] -z-10"
         size="48rem"
-        color="rgba(15, 110, 167, 0.25)"
+        color="rgba(210, 90, 35, 0.25)"
         transparency={80}
       />
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">

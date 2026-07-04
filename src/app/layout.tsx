@@ -94,6 +94,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${iranSans.variable} relative antialiased pt-14 pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))] lg:pt-0 lg:pb-0`}
       >
+        <a
+          className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[10001] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:outline-none focus:ring-2 focus:ring-primary/60"
+          href="#main-content"
+        >
+          رفتن به محتوای اصلی
+        </a>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <ThemeProvider
           attribute={"class"}
@@ -102,7 +108,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SmoothScrolling>
-            {children}
+            <main id="main-content">{children}</main>
             <SiteChrome />
           </SmoothScrolling>
         </ThemeProvider>

@@ -45,7 +45,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-4 text-left">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.svg"
               width={160}
               height={56}
               alt={FOOTER_LOGO_ALT}
