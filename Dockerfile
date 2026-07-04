@@ -7,7 +7,8 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_OPTIONS="--max-old-space-size=3072"
 
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --include=optional \
+  && npm install --no-save lightningcss-linux-x64-gnu
 
 COPY . .
 RUN rm -rf .next
