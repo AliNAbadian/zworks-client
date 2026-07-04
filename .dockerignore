@@ -1,9 +1,4 @@
-Dockerfile
-Dockerfile.runtime
-docker-compose.yml
-Caddyfile
 node_modules
-.next
 .git
 .gitignore
 *.md
@@ -13,6 +8,7 @@ node_modules
 .vscode
 .idea
 coverage
+*.tar
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
