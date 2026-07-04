@@ -4,14 +4,16 @@ WORKDIR /app
 ARG NEXT_PUBLIC_SITE_URL=https://zworks.ir
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=development
 ENV NODE_OPTIONS="--max-old-space-size=3072"
 
 COPY package.json package-lock.json ./
-RUN npm ci --include=optional \
-  && npm install --no-save lightningcss-linux-x64-gnu
+RUN npm ci --include=dev --include=optional \
+  && npm install --no-save @tailwindcss/oxide-linux-x64-gnu lightningcss-linux-x64-gnu
 
 COPY . .
 RUN rm -rf .next
+ENV NODE_ENV=production
 RUN npm run build
 
 FROM node:20-bookworm-slim AS runner
