@@ -11,10 +11,13 @@ FROM base AS builder
 ARG NEXT_PUBLIC_SITE_URL=https://zworks.ir
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
+# Keep the Node heap small so the VPS OOM killer is less likely to strike during build.
+ENV NODE_OPTIONS="--max-old-space-size=768"
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN bun run build
+RUN bun run build:docker
 
 FROM base AS runner
 WORKDIR /app

@@ -1,9 +1,4 @@
-Dockerfile
-Dockerfile.runtime
-docker-compose.yml
-Caddyfile
 node_modules
-.next
 .git
 .gitignore
 *.md
