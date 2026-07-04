@@ -1,4 +1,4 @@
-FROM oven/bun:1 AS builder
+FROM node:20-bookworm-slim AS builder
 WORKDIR /app
 
 ARG NEXT_PUBLIC_SITE_URL=https://zworks.ir
@@ -6,16 +6,14 @@ ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_OPTIONS="--max-old-space-size=3072"
 
-COPY package.json bun.lock ./
-# Install production deps only, then add build-time dev deps (skip @biomejs/biome — its musl binary fails in this image).
-RUN bun install --frozen-lockfile --production \
-  && bun add -d typescript @tailwindcss/postcss tailwindcss @types/node @types/react @types/react-dom tw-animate-css
+COPY package.json package-lock.json ./
+RUN npm ci
 
 COPY . .
 RUN rm -rf .next
-RUN bun run build
+RUN npm run build
 
-FROM oven/bun:1 AS runner
+FROM node:20-bookworm-slim AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -36,4 +34,4 @@ EXPOSE 3000
 HEALTHCHECK --interval=15s --timeout=10s --start-period=90s --retries=5 \
   CMD curl -f http://127.0.0.1:3000/ || exit 1
 
-CMD ["bun", "server.js"]
+CMD ["node", "server.js"]
