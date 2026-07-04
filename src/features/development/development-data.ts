@@ -2,7 +2,7 @@ export const DEVELOPMENT_HERO = {
   titleHighlight: "خدمات",
   titleMain: "توسعه وب",
   description:
-    "توسعه وب حرفه‌ای با React، Next.js و وردپرس. از سایت شرکتی و فروشگاهی تا پلتفرم‌های SaaS — طراحی، پیاده‌سازی و تحویل با تیم تخصصی زی‌ورکس.",
+    "توسعه وب حرفه‌ای با React، Next.js و وردپرس. از سایت شرکتی و فروشگاهی تا پلتفرم‌های SaaS — طراحی، پیاده‌سازی و تحویل با تیم تخصصی مارس.",
 } as const;
 
 export const DEVELOPMENT_PORTFOLIO_INTRO =

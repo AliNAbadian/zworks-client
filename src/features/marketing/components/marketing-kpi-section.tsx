@@ -46,12 +46,12 @@ const MarketingKpiSection = () => {
                 "group relative flex flex-col items-center overflow-hidden rounded-[28px] border p-6 text-center sm:p-8",
                 "bg-[linear-gradient(145deg,rgba(4,40,39,0.95)_0%,rgba(4,20,46,0.92)_55%,rgba(3,18,28,0.92)_100%)]",
                 "border-white/10 shadow-[0_40px_100px_-60px_rgba(0,0,0,0.85)] backdrop-blur-xl",
-                "transition-all duration-500 hover:border-primary/30 hover:shadow-[0_50px_120px_-50px_rgba(0,178,98,0.25)]",
+                "transition-all duration-500 hover:border-primary/30 hover:shadow-[0_50px_120px_-50px_rgb(var(--primary-rgb)/0.25)]",
               )}
             >
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,178,98,0.2),transparent_60%)]"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgb(var(--primary-rgb)/0.2),transparent_60%)]"
               />
 
               <div className="relative flex flex-col items-center gap-4">

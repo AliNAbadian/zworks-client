@@ -10,7 +10,7 @@ import { buildPageMetadata } from "@/lib/seo/site-seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "خدمات توسعه وب و طراحی سایت",
   description:
-    "توسعه وب حرفه‌ای با React، Next.js و وردپرس. طراحی سایت شرکتی، فروشگاهی و SaaS — از ایده تا تحویل توسط تیم تخصصی زی‌ورکس.",
+    "توسعه وب حرفه‌ای با React، Next.js و وردپرس. طراحی سایت شرکتی، فروشگاهی و SaaS — از ایده تا تحویل توسط تیم تخصصی مارس.",
   path: "/development",
   keywords: [
     "توسعه وب",

@@ -160,7 +160,7 @@ export const showcaseItems: ShowcaseItem[] = [
     description:
       "طراحی داشبورد تحلیلی با تمرکز بر خوانایی داده‌ها، نمودارهای تعاملی و جریان کار سریع برای مدیران مالی.",
     gradient:
-      "linear-gradient(135deg, rgba(0,178,98,0.35) 0%, rgba(4,20,46,0.95) 55%, rgba(3,18,28,0.95) 100%)",
+      "linear-gradient(135deg, rgb(var(--primary-rgb)/0.35) 0%, rgba(4,20,46,0.95) 55%, rgba(3,18,28,0.95) 100%)",
   },
   {
     id: "ecommerce-app",

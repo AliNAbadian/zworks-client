@@ -12,7 +12,7 @@ const HeroMeta = () => {
         </h1>
         <div className="flex w-full flex-col items-center gap-4 rounded-3xl border border-accent bg-gradient-to-b from-transparent to-primary/5 px-5 py-6 font-iransans backdrop-blur-2xl sm:px-8 sm:py-8 lg:flex-row lg:gap-x-4 lg:px-10">
           <img
-            alt="آیکون نوآوری زی‌ورکس"
+            alt="آیکون نوآوری مارس"
             className="size-12 shrink-0 opacity-100 lg:size-auto"
             src="/images/fire.png"
           />
@@ -27,7 +27,7 @@ const HeroMeta = () => {
       </div>
 
       <div className="hidden w-full max-w-[40%] lg:block">
-        <img alt="گرافیک خدمات طراحی و توسعه وب زی‌ورکس" className="w-full" src="/images/mainshape.svg" />
+        <img alt="گرافیک خدمات طراحی و توسعه وب مارس" className="w-full" src="/images/mainshape.svg" />
       </div>
     </div>
   );

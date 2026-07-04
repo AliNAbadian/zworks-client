@@ -25,8 +25,8 @@ const SupportPlanCard = ({ plan }: { plan: SupportPlan }) => {
         "bg-[linear-gradient(145deg,rgba(4,40,39,0.95)_0%,rgba(4,20,46,0.92)_55%,rgba(3,18,28,0.92)_100%)]",
         "shadow-[0_40px_100px_-60px_rgba(0,0,0,0.85)] transition-all duration-500",
         plan.highlighted
-          ? "z-10 border-primary/50 shadow-[0_50px_120px_-50px_rgba(0,178,98,0.45)] xl:scale-[1.03]"
-          : "border-white/10 hover:border-primary/30 hover:shadow-[0_50px_120px_-50px_rgba(0,178,98,0.25)]",
+          ? "z-10 border-primary/50 shadow-[0_50px_120px_-50px_rgb(var(--primary-rgb)/0.45)] xl:scale-[1.03]"
+          : "border-white/10 hover:border-primary/30 hover:shadow-[0_50px_120px_-50px_rgb(var(--primary-rgb)/0.25)]",
       )}
     >
       {plan.badge ? (
@@ -41,7 +41,7 @@ const SupportPlanCard = ({ plan }: { plan: SupportPlan }) => {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,178,98,0.2),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgb(var(--primary-rgb)/0.2),transparent_55%)]"
       />
 
       <div className="relative flex flex-1 flex-col gap-6">

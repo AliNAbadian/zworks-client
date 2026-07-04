@@ -38,7 +38,7 @@ export const webDevelopmentServiceSchema = {
   "@type": "Service",
   name: "خدمات طراحی و توسعه وب",
   description:
-    "طراحی وب‌سایت حرفه‌ای، توسعه React/Next.js، ساخت سایت شرکتی و اپلیکیشن وب توسط تیم زی‌ورکس.",
+    "طراحی وب‌سایت حرفه‌ای، توسعه React/Next.js، ساخت سایت شرکتی و اپلیکیشن وب توسط تیم مارس.",
   provider: {
     "@type": "Organization",
     name: SITE_NAME,

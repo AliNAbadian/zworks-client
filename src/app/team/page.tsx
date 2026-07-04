@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo/site-seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "تیم تخصصی طراحی و توسعه وب",
   description:
-    "آشنایی با تیم متخصص زی‌ورکس در طراحی UI/UX، توسعه React/Next.js و پروژه‌های وب سازمانی — همراه شما از ایده تا محصول.",
+    "آشنایی با تیم متخصص مارس در طراحی UI/UX، توسعه React/Next.js و پروژه‌های وب سازمانی — همراه شما از ایده تا محصول.",
   path: "/team",
   keywords: ["تیم توسعه وب", "شرکت طراحی وب"],
 });

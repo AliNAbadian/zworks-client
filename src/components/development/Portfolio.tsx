@@ -16,10 +16,10 @@ const Portfolio = () => {
         </p>
         <div className="grid h-[200px] grid-cols-1 gap-4 sm:h-[30vh] sm:grid-cols-2">
           <div className="border border-gray-800 rounded-4xl  relative overflow-hidden">
-            <Image src={"/images/mockup1.jpg"} fill alt="mockup zworks" />
+            <Image src={"/images/mockup1.jpg"} fill alt="mockup Mars Agency" />
           </div>
           <div className="border rounded-4xl  relative overflow-hidden">
-            <Image src={"/images/mockup2.jpg"} fill alt="mockup zworks" />
+            <Image src={"/images/mockup2.jpg"} fill alt="mockup Mars Agency" />
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 module.exports = {
   apps: [
     {
-      name: "zworks-client",
-      cwd: "/var/www/zworks-client",
+      name: "mars-agency",
+      cwd: "/var/www/mars-agency",
       script: "server.js",
       interpreter: "node",
       instances: 1,

@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo/site-seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "طراحی UI/UX حرفه‌ای",
   description:
-    "طراحی رابط و تجربه کاربری UI/UX مدرن برای وب و موبایل — تحقیق کاربر، وایرفریم و دیزاین سیستم توسط تیم زی‌ورکس.",
+    "طراحی رابط و تجربه کاربری UI/UX مدرن برای وب و موبایل — تحقیق کاربر، وایرفریم و دیزاین سیستم توسط تیم مارس.",
   path: "/services/ui-ux",
   keywords: ["طراحی UI", "طراحی UX", "تجربه کاربری", "رابط کاربری"],
 });

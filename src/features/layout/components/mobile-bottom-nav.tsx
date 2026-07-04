@@ -39,7 +39,7 @@ const MobileBottomNav = () => {
                 className={cn(
                   "flex size-9 items-center justify-center rounded-full transition-colors",
                   isContact &&
-                    "bg-primary text-primary-foreground shadow-[0_0_20px_rgba(0,178,98,0.45)]",
+                    "bg-primary text-primary-foreground shadow-[0_0_20px_rgb(var(--primary-rgb)/0.45)]",
                   !isContact && isActive && "bg-primary/15",
                 )}
               >

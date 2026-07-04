@@ -46,9 +46,9 @@ const CloudArchitectureSection = () => {
           >
             <defs>
               <linearGradient id="flowGradient" x1="0%" x2="100%" y1="0%" y2="0%">
-                <stop offset="0%" stopColor="rgba(0,178,98,0.1)" />
-                <stop offset="50%" stopColor="rgba(0,178,98,0.4)" />
-                <stop offset="100%" stopColor="rgba(0,178,98,0.1)" />
+                <stop offset="0%" stopColor="rgb(var(--primary-rgb)/0.1)" />
+                <stop offset="50%" stopColor="rgb(var(--primary-rgb)/0.4)" />
+                <stop offset="100%" stopColor="rgb(var(--primary-rgb)/0.1)" />
               </linearGradient>
             </defs>
             <path
@@ -57,11 +57,11 @@ const CloudArchitectureSection = () => {
               strokeDasharray="8 4"
               strokeWidth="2"
             />
-            <circle cx="100" cy="300" fill="rgba(0,178,98,0.3)" r="6" />
-            <circle cx="250" cy="300" fill="rgba(0,178,98,0.3)" r="6" />
-            <circle cx="400" cy="300" fill="rgba(0,178,98,0.3)" r="6" />
-            <circle cx="550" cy="300" fill="rgba(0,178,98,0.3)" r="6" />
-            <circle cx="700" cy="300" fill="rgba(0,178,98,0.3)" r="6" />
+            <circle cx="100" cy="300" fill="rgb(var(--primary-rgb)/0.3)" r="6" />
+            <circle cx="250" cy="300" fill="rgb(var(--primary-rgb)/0.3)" r="6" />
+            <circle cx="400" cy="300" fill="rgb(var(--primary-rgb)/0.3)" r="6" />
+            <circle cx="550" cy="300" fill="rgb(var(--primary-rgb)/0.3)" r="6" />
+            <circle cx="700" cy="300" fill="rgb(var(--primary-rgb)/0.3)" r="6" />
           </svg>
         </div>
 
@@ -76,12 +76,12 @@ const CloudArchitectureSection = () => {
                     "group relative w-full overflow-hidden rounded-[24px] border p-5 text-center",
                     "bg-[linear-gradient(145deg,rgba(4,40,39,0.95)_0%,rgba(4,20,46,0.92)_55%,rgba(3,18,28,0.92)_100%)]",
                     "border-white/10 shadow-[0_30px_80px_-50px_rgba(0,0,0,0.85)] backdrop-blur-xl",
-                    "transition-all duration-500 hover:border-primary/30 hover:shadow-[0_40px_100px_-40px_rgba(0,178,98,0.25)]",
+                    "transition-all duration-500 hover:border-primary/30 hover:shadow-[0_40px_100px_-40px_rgb(var(--primary-rgb)/0.25)]",
                   )}
                 >
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,178,98,0.15),transparent_60%)]"
+                    className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgb(var(--primary-rgb)/0.15),transparent_60%)]"
                   />
 
                   <div className="relative flex flex-col items-center gap-3">

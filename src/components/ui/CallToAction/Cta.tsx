@@ -13,7 +13,7 @@ const Cta = () => {
 
         <div className="relative z-10 w-full max-w-xs sm:max-w-md lg:max-w-2xl">
           <Image
-            alt="زی ورکس"
+            alt="مارس"
             className="h-auto w-full"
             height={960}
             src="/images/bigLogo.png"

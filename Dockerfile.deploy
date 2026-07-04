@@ -1,7 +1,7 @@
 # Packages a local Next.js build — does NOT run `next build`.
 #
 #   npm run build
-#   docker build -f Dockerfile.deploy -t zworks-client:latest .
+#   docker build -f Dockerfile.deploy -t mars-agency:latest .
 
 FROM node:20-bookworm-slim
 WORKDIR /app

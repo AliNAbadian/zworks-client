@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Image
-        alt="لوگوی زی‌ورکس — شرکت طراحی و توسعه وب"
+        alt="لوگوی مارس — آژانس طراحی و توسعه وب"
         className="h-10 w-auto object-contain"
         height={40}
         src={"/images/logoName.png"}
@@ -63,7 +63,7 @@ const Navbar = () => {
                 transition={{ duration: 0.25, ease: "easeOut" }}
                 className="fixed start-0 end-0 top-[110%] z-[10000] mx-auto w-[82vw] overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a1a]/70 p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-2xl"
               >
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,178,98,0.12),transparent_55%)]" aria-hidden="true" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgb(var(--primary-rgb)/0.12),transparent_55%)]" aria-hidden="true" />
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(160deg,rgba(255,255,255,0.06)_0%,transparent_50%)]" aria-hidden="true" />
 
                 <div className="relative z-10 grid grid-cols-2 gap-6">

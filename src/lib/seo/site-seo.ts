@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-export const SITE_NAME = "زی‌ورکس";
-export const SITE_NAME_EN = "ZWORKS";
+export const SITE_NAME = "مارس";
+export const SITE_NAME_EN = "Mars Agency";
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://zworks.ir";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://mars-agency.ir";
 
 export const DEFAULT_KEYWORDS = [
   "طراحی وب سایت",
@@ -15,8 +15,9 @@ export const DEFAULT_KEYWORDS = [
   "طراحی سایت شرکتی",
   "توسعه اپلیکیشن وب",
   "طراحی UI/UX",
-  "زی ورکس",
-  "ZWORKS",
+  "مارس",
+  "Mars Agency",
+  "mars-agency",
   "React",
   "Next.js",
   "وردپرس",
@@ -26,7 +27,7 @@ export const DEFAULT_KEYWORDS = [
 ] as const;
 
 export const DEFAULT_DESCRIPTION =
-  "زی‌ورکس؛ شرکت طراحی و توسعه وب حرفه‌ای. طراحی وب‌سایت، توسعه React/Next.js، UI/UX، سئو و دیجیتال مارکتینگ — ساخت سایت شرکتی و اپلیکیشن وب با کیفیت enterprise.";
+  "مارس؛ آژانس طراحی و توسعه وب حرفه‌ای. طراحی وب‌سایت، توسعه React/Next.js، UI/UX، سئو و دیجیتال مارکتینگ — ساخت سایت شرکتی و اپلیکیشن وب با کیفیت enterprise.";
 
 type BuildPageMetadataOptions = {
   title: string;

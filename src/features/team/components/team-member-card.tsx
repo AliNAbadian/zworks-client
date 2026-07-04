@@ -13,7 +13,7 @@ const TeamMemberCard = ({ member, className }: TeamMemberCardProps) => {
       className={cn(
         "group relative flex min-h-[420px] flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#1a1a1a] sm:min-h-[480px]",
         "shadow-[0_30px_80px_-50px_rgba(0,0,0,0.9)] transition-shadow duration-500",
-        "hover:shadow-[0_40px_100px_-50px_rgba(0,178,98,0.35)]",
+        "hover:shadow-[0_40px_100px_-50px_rgb(var(--primary-rgb)/0.35)]",
         className,
       )}
     >
@@ -23,7 +23,7 @@ const TeamMemberCard = ({ member, className }: TeamMemberCardProps) => {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -inset-x-1/4 top-0 h-[469px] bg-[radial-gradient(ellipse_at_center,rgba(0,178,98,0.18),transparent_70%)] opacity-80"
+        className="pointer-events-none absolute -inset-x-1/4 top-0 h-[469px] bg-[radial-gradient(ellipse_at_center,rgb(var(--primary-rgb)/0.18),transparent_70%)] opacity-80"
       />
 
       <div className="relative flex flex-1 flex-col items-center px-6 pb-8 pt-12">

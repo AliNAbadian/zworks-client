@@ -1,7 +1,7 @@
 FROM node:20-bookworm-slim AS builder
 WORKDIR /app
 
-ARG NEXT_PUBLIC_SITE_URL=https://zworks.ir
+ARG NEXT_PUBLIC_SITE_URL=https://mars-agency.ir
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=development

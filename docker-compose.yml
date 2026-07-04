@@ -1,11 +1,11 @@
 services:
   app:
-    image: zworks-client:latest
+    image: mars-agency:latest
     build:
       context: .
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://zworks.ir}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://mars-agency.ir}
     restart: unless-stopped
     ports:
       - "127.0.0.1:23654:3000"

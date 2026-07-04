@@ -41,7 +41,7 @@ const MarketingCtaSection = () => {
 
           <div className="relative mt-4 w-full max-w-xs opacity-40 sm:max-w-md lg:max-w-lg">
             <Image
-              alt="زی‌ورکس"
+              alt="مارس"
               className="h-auto w-full"
               height={960}
               src="/images/bigLogo.png"

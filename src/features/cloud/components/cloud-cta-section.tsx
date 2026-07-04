@@ -12,7 +12,7 @@ const CloudCtaSection = () => {
         className={cn(
           "relative overflow-hidden rounded-[32px] border border-white/15 font-iransans",
           "bg-[linear-gradient(145deg,rgba(4,40,39,0.98)_0%,rgba(4,25,50,0.95)_40%,rgba(3,18,28,0.98)_100%)]",
-          "shadow-[0_60px_120px_-40px_rgba(0,178,98,0.2)] backdrop-blur-2xl",
+          "shadow-[0_60px_120px_-40px_rgb(var(--primary-rgb)/0.2)] backdrop-blur-2xl",
         )}
       >
         <div
@@ -41,7 +41,7 @@ const CloudCtaSection = () => {
           <div className="flex w-full max-w-lg flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
             <Button
               asChild
-              className="h-12 rounded-2xl bg-primary px-10 font-semibold text-white shadow-[0_0_40px_-10px_rgba(0,178,98,0.6)] hover:bg-primary/90"
+              className="h-12 rounded-2xl bg-primary px-10 font-semibold text-white shadow-[0_0_40px_-10px_rgb(var(--primary-rgb)/0.6)] hover:bg-primary/90"
               size="lg"
             >
               <Link href={CLOUD_CTA.primaryCta.href}>

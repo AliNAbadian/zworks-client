@@ -2,7 +2,7 @@ export const TEAM_HERO = {
   highlight: "عصر دیجیتال",
   prefix: "ارتقای برندها در",
   description:
-    "تیم زی‌ورکس ترکیبی از طراحان UI/UX، برندینگ و توسعه‌دهندگان React/Next.js است که با همکاری نزدک، محصولات دیجیتال مقیاس‌پذیر و با کیفیت enterprise می‌سازند.",
+    "تیم مارس ترکیبی از طراحان UI/UX، برندینگ و توسعه‌دهندگان React/Next.js است که با همکاری نزدک، محصولات دیجیتال مقیاس‌پذیر و با کیفیت enterprise می‌سازند.",
 } as const;
 
 export const TEAM_SECTION_COPY = {

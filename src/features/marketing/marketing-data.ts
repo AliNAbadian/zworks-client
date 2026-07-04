@@ -168,7 +168,7 @@ export const successStories: SuccessStory[] = [
       { value: "۴.۲x", label: "ROAS" },
     ],
     gradient:
-      "linear-gradient(135deg, rgba(0,178,98,0.55) 0%, rgba(4,40,39,0.95) 45%, rgba(3,18,28,0.95) 100%)",
+      "linear-gradient(135deg, rgb(var(--primary-rgb)/0.55) 0%, rgba(4,40,39,0.95) 45%, rgba(3,18,28,0.95) 100%)",
   },
   {
     id: "arman-clinic",

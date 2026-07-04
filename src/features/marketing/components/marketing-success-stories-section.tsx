@@ -26,7 +26,7 @@ const MarketingSuccessStoriesSection = () => {
               "group relative flex flex-col overflow-hidden rounded-[28px] border border-white/10",
               "bg-[linear-gradient(145deg,rgba(4,40,39,0.95)_0%,rgba(4,20,46,0.92)_55%,rgba(3,18,28,0.92)_100%)]",
               "shadow-[0_45px_120px_-60px_rgba(0,0,0,0.85)]",
-              "transition-shadow duration-500 hover:shadow-[0_55px_140px_-60px_rgba(0,178,98,0.45)]",
+              "transition-shadow duration-500 hover:shadow-[0_55px_140px_-60px_rgb(var(--primary-rgb)/0.45)]",
             )}
           >
             <div
@@ -45,7 +45,7 @@ const MarketingSuccessStoriesSection = () => {
                   ))}
                 </div>
               </div>
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,178,98,0.22),transparent_65%)] opacity-70" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgb(var(--primary-rgb)/0.22),transparent_65%)] opacity-70" />
             </div>
 
             <div className="relative flex flex-1 flex-col gap-4 p-6 sm:p-7">

@@ -38,13 +38,13 @@ const ProjectsCard: FC<IProjectsCardProps> = ({
     <article
       className={cn(
         "group relative overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(145deg,rgba(4,40,39,0.95)0%,rgba(4,20,46,0.92)55%,rgba(3,18,28,0.92)100%)] p-8 text-white shadow-[0_45px_120px_-60px_rgba(0,0,0,0.85)]",
-        "transition-shadow duration-500 hover:shadow-[0_55px_140px_-60px_rgba(0,178,98,0.45)]",
+        "transition-shadow duration-500 hover:shadow-[0_55px_140px_-60px_rgb(var(--primary-rgb)/0.45)]",
         className,
       )}
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,178,98,0.45),transparent_55%)] opacity-70"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgb(var(--primary-rgb)/0.45),transparent_55%)] opacity-70"
       />
       <div
         aria-hidden="true"
@@ -75,7 +75,7 @@ const ProjectsCard: FC<IProjectsCardProps> = ({
               </div>
             </div>
           )}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,178,98,0.22),transparent_65%)] opacity-70" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgb(var(--primary-rgb)/0.22),transparent_65%)] opacity-70" />
         </div>
 
         <div className="flex flex-col gap-6 text-sm text-white/70">
