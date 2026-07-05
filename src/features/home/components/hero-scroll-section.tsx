@@ -31,7 +31,7 @@ const HeroScrollSection = () => {
   );
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-screen overflow-hidden">
+    <section ref={sectionRef} className="relative mx-auto min-h-[calc(100vh-3.5rem)] w-full overflow-hidden lg:min-h-screen">
       <motion.div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{ opacity: backgroundOpacity }}

@@ -1,14 +1,13 @@
 import Link from "next/link";
 
-import Radial from "@/components/shared/effects/Radial";
 import { Button } from "@/components/ui/button";
 import HeroBg from "@/components/ui/HeroSection/HeroBg";
 import { CLOUD_HERO } from "@/features/cloud/cloud-data";
 
 const CloudHero = () => {
   return (
-    <section className="relative w-full overflow-hidden pb-16 pt-8 sm:pb-20 lg:pb-28 lg:pt-12">
-      <div className="container relative z-10 mx-auto flex flex-col items-center gap-8 px-4 text-center md:px-6 lg:gap-10">
+    <section className="relative mx-auto min-h-[calc(100vh-3.5rem)] w-full overflow-hidden lg:min-h-screen">
+      <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center gap-8 px-4 py-20 text-center font-iransans sm:px-6 sm:py-28 md:px-6 lg:min-h-screen lg:gap-10 lg:py-32">
         <span className="max-w-2xl rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium leading-relaxed text-primary">
           {CLOUD_HERO.eyebrow}
         </span>
@@ -44,12 +43,6 @@ const CloudHero = () => {
         </div>
       </div>
 
-      <Radial
-        className="start-1/2 top-0 -translate-x-1/2 -translate-y-1/4"
-        color="rgba(0, 178, 98, 0.35)"
-        size="70rem"
-        transparency={65}
-      />
       <HeroBg />
     </section>
   );

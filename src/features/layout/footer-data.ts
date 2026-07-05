@@ -29,7 +29,7 @@ export const footerColumns = [
     links: [
       { label: "تیم تخصصی", href: "/team" },
       { label: "پلن‌ها و قیمت‌گذاری", href: "/plans" },
-      { label: "نمونه کارها", href: "/development" },
+      { label: "نمونه کارها", href: "/projects" },
       { label: "صفحه اصلی", href: "/" },
     ],
   },

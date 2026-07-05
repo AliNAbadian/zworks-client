@@ -1,5 +1,3 @@
-import Radial from "@/components/shared/effects/Radial";
-import SideStripes from "@/components/ui/development/SideStripes";
 import HeroBg from "@/components/ui/HeroSection/HeroBg";
 import { TEAM_HERO } from "@/features/team/lib/constants";
 
@@ -27,13 +25,6 @@ const TeamHero = () => {
           <SideStripes />
         </div> */}
       </div>
-
-      {/* <Radial
-        className="start-1/2 top-0 -translate-x-1/2 -translate-y-1/4"
-        color="rgba"
-        size="70rem"
-        transparency={65}
-      /> */}
 
       <HeroBg />
     </section>
